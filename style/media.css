@@ -1,0 +1,43 @@
+@media(prefers-color-scheme:dark) {
+    .logo::before{
+        content: url(../image/svg/logo-dark.svg);
+    }
+    :root{
+        --second-color:#fff;
+        --body:#151437;
+        --dots:#ebebeb;
+    }
+}
+@media(max-width:1600px){
+    .header__nav::after{
+        right: 0;
+    }
+}
+@media(max-width:1024px){
+    .header__nav::after,
+    .header__nav::before{
+        display: none;
+    }
+}
+
+
+
+
+@media(max-width:425px){
+   .header__title{
+    font-size: 34px;
+    line-height: 38px;
+   }
+   .header__btn{
+       width: 100%;
+   }
+}
+@media(max-width:375px){
+   .header__title{
+    font-size: 26px;
+    line-height: 30px;
+   }
+   .header__bottom-subtitle{
+       font-size: 20px;
+   }
+}
