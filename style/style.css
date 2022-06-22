@@ -8,7 +8,7 @@
     --main-color: #7177F1;
     --second-color: #323232;
     --body: #fff;
-    --dots:#828282;
+    --dots: #828282;
 }
 
 body {
@@ -128,6 +128,7 @@ body {
     right: -160px;
     animation: alternate-reverse animate 3s infinite linear;
 }
+
 .header__bottom-subtitle {
     color: var(--second-color);
     font-weight: 600;
@@ -137,6 +138,7 @@ body {
     margin-bottom: 10px;
     display: inline-block;
 }
+
 .header__title {
     font-weight: 600;
     font-size: 40px;
@@ -145,6 +147,7 @@ body {
     color: var(--main-color);
     margin-bottom: 25px;
 }
+
 .header__btn {
     font-size: 18px;
     line-height: 100%;
@@ -156,15 +159,18 @@ body {
     text-align: center;
     margin: 0 auto;
 }
+
 .header__bottom-desc {
     margin-bottom: 50px;
 }
+
 .header__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 15px;
 }
+
 .header__icons-name {
     font-weight: 900;
     font-size: 20px;
@@ -172,12 +178,14 @@ body {
     color: var(--main-color);
     text-transform: uppercase;
 }
-.slider__indicators{
+
+.slider__indicators {
     position: static;
     margin: 0;
     column-gap: 30px;
 }
-.slider__indicators>button{
+
+.slider__indicators>button {
     width: 15px !important;
     height: 15px !important;
     border-radius: 50%;
@@ -185,6 +193,84 @@ body {
     background: var(--dots) !important;
     border: none !important;
 }
-.slider__indicators>button.active{
+
+.slider__indicators>button.active {
     background: var(--main-color) !important;
+}
+
+.header__content {
+    position: relative;
+}
+.header__content::before {
+    position: absolute;
+    content: '';
+    width: 79.81px;
+    height: 80.45px;
+    border: 5px solid #9297EF;
+   animation: animate2 8s infinite linear;
+}
+.header__content::after{
+    left: unset;
+    top: 350px;
+    right: 300px;
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80.45px;
+    border: 5px solid #7177F1;
+    animation: animate2right linear 10s infinite;
+}
+@keyframes animate2 {
+    0%{
+        left: 0;
+        top: 50%;
+        transform: rotate(0deg);
+    }
+    25%{
+        top: 0;
+        left: 50%;
+        transform: rotate(90deg);
+    }
+    50%{
+        top: 50%;
+        left: calc(100% - 80px); 
+        transform: rotate(0deg);
+    }
+    75%{
+        top: calc(100% - 95px);
+        left: calc(50% - 40px);
+        transform: rotate(90deg);
+    }
+    100%{
+        left: 0;
+        top: 50%;
+        transform: rotate(0deg);
+    }
+}
+@keyframes animate2right {
+    0%{
+        right: 0;
+        top: 50%;
+        transform: rotate(0deg);
+    }
+    25%{
+        top: 0;
+        right: 50%;
+        transform: rotate(90deg);
+    }
+    50%{
+        top: 50%;
+        right: calc(100% - 80px); 
+        transform: rotate(0deg);
+    }
+    75%{
+        top: calc(100% - 95px);
+        right: calc(50% - 40px);
+        transform: rotate(90deg);
+    }
+    100%{
+        right: 0;
+        top: 50%;
+        transform: rotate(0deg);
+    }
 }

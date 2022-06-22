@@ -14,6 +14,8 @@
     }
 }
 @media(max-width:1024px){
+    .header__content::after,
+    .header__content::before,
     .header__nav::after,
     .header__nav::before{
         display: none;
